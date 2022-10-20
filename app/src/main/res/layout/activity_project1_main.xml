@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Project1_MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtSysInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linear System Solver"
+        android:layout_margin="15dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtResult"
+    android:layout_below="@+id/txtSysInfo"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/txtVector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="vector:"
+        android:layout_below="@id/txtSysInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/txtGauss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Gauss time"
+        android:layout_below="@id/txtSysInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/txtMatrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Matrix time"
+        android:layout_below="@id/txtSysInfo"
+        android:layout_centerHorizontal="true"/>
+</LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rgSystemSize"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtResult">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbTwoVarSystem"
+            android:text="2 var"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbThreeVarSystem"
+            android:text="3 var"
+            android:layout_toRightOf="@+id/rbTwoVarSystem"/>
+    </RadioGroup>
+
+
+    <RelativeLayout
+    android:id="@+id/inputGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/rgSystemSize"
+    android:layout_centerHorizontal="true">
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputInclude2"
+        layout="@layout/two_var_input_layout"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputInclude3"
+        layout="@layout/three_var_input_layout"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@+id/inputGroup"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnGroup">
+
+        <Button
+            android:id="@+id/calcBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Save input"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/calcBtn"
+            />
+
+        <Button
+            android:id="@+id/loadBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Load input"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/saveBtn"
+            />
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Graphics"
+            android:layout_toRightOf="@+id/loadBtn"
+            android:layout_below="@+id/saveBtn"
+            android:id="@+id/showGraphics"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loadBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="File name input"
+            android:minHeight="48dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
