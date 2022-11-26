@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentChickenView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id:"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txtChickenId"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breed:"
+            android:layout_below="@+id/txtChickenId"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txtChickenBreed"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type:"
+            android:layout_below="@+id/txtChickenBreed"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txtChickenType"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Production:"
+            android:layout_below="@+id/txtChickenType"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txtChickenProduction"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/txtChickenId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Chicken Id"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/txtChickenBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtChickenId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Chicken Name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtChickenType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtChickenBreed"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Chicken Type"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtChickenProduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtChickenType"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Chicken Production"
+            android:textStyle="italic|bold" />
+
+        <Button
+            android:id="@+id/btn_deleteListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#A31515"
+            android:text="delete"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

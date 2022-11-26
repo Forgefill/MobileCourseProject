@@ -18,12 +18,9 @@ public class MatrixMath {
     static public  ArrayList<Double> gaussianElimination(ArrayList<ArrayList<Double>> A, ArrayList<Double> b)
     {
         int n = b.size();
-
-        // singular or nearly singular
         if (isSingular(A)) {
             return null;
         }
-
         for (int p = 0; p < n; p++) {
 
             // find pivot row and swap
@@ -40,8 +37,6 @@ public class MatrixMath {
             b.set(p, b.get(max));
             b.set(max, t);
 
-
-            // pivot within A and b
             for (int i = p + 1; i < n; i++) {
                 double alpha = A.get(i).get(p) / A.get(p).get(p);
                 b.set(i, b.get(i) -  alpha * b.get(p));
@@ -51,7 +46,6 @@ public class MatrixMath {
             }
         }
 
-        // back substitution
         ArrayList<Double> x = new ArrayList<>();
         for(int i = 0; i < n; i++)
         {
@@ -83,7 +77,6 @@ public class MatrixMath {
         }
 
         res = getColumnById(0, mult(row1,col1, getInverseMatrix(A), row2, col2, bMatrix));
-
 
         return res;
     }

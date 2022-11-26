@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MobileCourseProject</string>
+    <string-array name="chicken_type">
+        <item>egg</item>
+        <item>meat-egg</item>
+        <item>meat</item>
+    </string-array>
+    <string name="title_activity_contact_maps">ContactMapsActivity</string>
 </resources>

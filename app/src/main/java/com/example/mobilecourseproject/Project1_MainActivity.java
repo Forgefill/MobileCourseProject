@@ -268,7 +268,6 @@ public class Project1_MainActivity extends AppCompatActivity implements View.OnC
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private ArrayList<ArrayList<Double>> loadCoeffInternalStorage(String filename)
